@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Diego Zappa | Art & Gastronomic Xperiences</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:#090909;
+color:#f5f5f5;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+nav{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+padding:30px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:10;
+}
+
+.logo{
+font-size:20px;
+font-weight:700;
+letter-spacing:3px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-size:13px;
+letter-spacing:1px;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 8%;
+background:
+radial-gradient(circle at 75% 40%,#372318 0%,#17110d 20%,#090909 55%);
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.eyebrow{
+font-size:12px;
+letter-spacing:4px;
+color:#c9a26a;
+margin-bottom:25px;
+}
+
+h1{
+font-size:clamp(70px,12vw,160px);
+line-height:.82;
+letter-spacing:-6px;
+margin:0 0 40px;
+font-weight:700;
+}
+
+.hero p{
+max-width:650px;
+font-size:20px;
+line-height:1.6;
+color:#cfcfcf;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:17px 25px;
+border:1px solid #c9a26a;
+color:white;
+text-decoration:none;
+font-size:12px;
+letter-spacing:2px;
+}
+
+section{
+padding:110px 8%;
+}
+
+h2{
+font-size:clamp(45px,7vw,90px);
+line-height:.95;
+margin:15px 0 60px;
+letter-spacing:-3px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:1px;
+background:#333;
+}
+
+.card{
+background:#101010;
+padding:50px 35px;
+min-height:300px;
+transition:.3s;
+}
+
+.card:hover{
+background:#171717;
+}
+
+.card span{
+color:#c9a26a;
+font-size:12px;
+}
+
+.card h3{
+font-size:28px;
+margin-top:45px;
+}
+
+.card p{
+color:#aaa;
+line-height:1.6;
+}
+
+.artist{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+background:#eee;
+color:#111;
+}
+
+.artist p{
+font-size:19px;
+line-height:1.8;
+}
+
+.artist .record{
+font-size:24px;
+font-weight:bold;
+margin-top:40px;
+}
+
+.statement{
+text-align:center;
+padding:130px 5%;
+}
+
+.statement strong{
+display:block;
+font-size:clamp(45px,8vw,110px);
+letter-spacing:-3px;
+}
+
+.statement span{
+color:#c9a26a;
+letter-spacing:5px;
+}
+
+.contact{
+background:#15100c;
+text-align:center;
+}
+
+.contact h2{
+font-size:clamp(50px,8vw,100px);
+}
+
+footer{
+padding:40px 8%;
+border-top:1px solid #292929;
+display:flex;
+justify-content:space-between;
+color:#777;
+font-size:12px;
+letter-spacing:1px;
+}
+
+@media(max-width:800px){
+nav div:last-child{display:none}
+h1{letter-spacing:-4px}
+.grid{grid-template-columns:1fr}
+.artist{grid-template-columns:1fr;gap:20px}
+footer{flex-direction:column;gap:15px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">DIEGO ZAPPA</div>
+<div>
+<a href="#experiencias">EXPERIENCIAS</a>
+<a href="#artista">EL ARTISTA</a>
+<a href="#contacto">CONTACTO</a>
+</div>
+</nav>
+
+<header class="hero">
+<div class="hero-content">
+
+<div class="eyebrow">
+ART · GASTRONOMY · LIVE EXPERIENCE
+</div>
+
+<h1>EL ARTE<br>SE VIVE.</h1>
+
+<p>
+Obras monumentales, comestibles y participativas donde
+gastronomía, cultura y público se convierten en parte
+de la creación artística.
+</p>
+
+<a class="button" href="#experiencias">
+DESCUBRIR EXPERIENCIAS ↓
+</a>
+
+</div>
+</header>
+
+<section id="experiencias">
+
+<div class="eyebrow">EXPERIENCIAS</div>
+
+<h2>Arte que se crea<br>para compartir.</h2>
+
+<div class="grid">
+
+<div class="card">
+<span>01</span>
+<h3>Arte con Jamón</h3>
+<p>
+Creaciones artísticas en directo utilizando uno de los
+grandes iconos de la gastronomía española.
+</p>
+</div>
+
+<div class="card">
+<span>02</span>
+<h3>Chocolate Art</h3>
+<p>
+Murales y obras comestibles realizadas con chocolate,
+desde formatos íntimos hasta instalaciones monumentales.
+</p>
+</div>
+
+<div class="card">
+<span>03</span>
+<h3>Frutas & Verduras</h3>
+<p>
+Color, textura y producto natural transformados en
+composiciones contemporáneas y colectivas.
+</p>
+</div>
+
+<div class="card">
+<span>04</span>
+<h3>Arte con Queso</h3>
+<p>
+Una experiencia visual y gastronómica donde el producto
+se convierte en materia artística.
+</p>
+</div>
+
+<div class="card">
+<span>05</span>
+<h3>Live Art</h3>
+<p>
+El proceso creativo se transforma en espectáculo.
+Público, artista y espacio forman parte de la obra.
+</p>
+</div>
+
+<div class="card">
+<span>06</span>
+<h3>Team Building</h3>
+<p>
+Experiencias colaborativas con café, vino, chocolate
+y otros materiales gastronómicos.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="artista" class="artist">
+
+<div>
+<div class="eyebrow">EL ARTISTA</div>
+<h2>Diego<br>Zappa</h2>
+</div>
+
+<div>
+<p>
+Artista especializado en acciones de arte colectivo y
+experiencias donde la gastronomía se transforma en un
+lenguaje creativo.
+</p>
+
+<p>
+Proyectos concebidos para ciudades, instituciones,
+marcas, eventos, ferias, hoteles y espacios culturales,
+adaptando cada obra a la identidad del lugar y de su público.
+</p>
+
+<p class="record">
+Autor del récord Guinness del cuadro de chocolate
+más grande del mundo.
+</p>
+</div>
+
+</section>
+
+<section class="statement">
+
+<strong>NO SOLO MIRAR.</strong>
+
+<span>
+CREAR · PARTICIPAR · DEGUSTAR
+</span>
+
+</section>
+
+<section id="contacto" class="contact">
+
+<div class="eyebrow">
+PROYECTOS & COLABORACIONES
+</div>
+
+<h2>¿Creamos algo<br>extraordinario?</h2>
+
+<p>
+Propuestas personalizadas para instituciones,
+empresas, eventos y espacios culturales.
+</p>
+
+<a class="button" href="mailto:diegozappazgz@gmail.com">
+HABLAR DE UN PROYECTO →
+</a>
+
+</section>
+
+<footer>
+<div>DIEGO ZAPPA</div>
+<div>ART & GASTRONOMIC XPERIENCES</div>
+<div>© 2026</div>
+</footer>
+
+</body>
+</html>
