@@ -21,7 +21,7 @@ section{padding:100px 7%}.intro{display:grid;grid-template-columns:1fr 1fr;gap:9
 .intro h2,.about h2,.contact h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(46px,7vw,92px);line-height:.95;letter-spacing:-.045em;margin:16px 0}.intro p,.about p,.contact p{font-size:18px;line-height:1.75;color:var(--muted)}
 .services{display:grid;grid-template-columns:repeat(2,1fr);padding-top:42px;padding-bottom:42px}
 .service{padding:48px 5vw 54px 0;border-top:1px solid var(--line);min-height:250px}.service:nth-child(odd){border-right:1px solid var(--line);padding-right:6vw}.service:nth-child(even){padding-left:6vw}
-.num{font-size:11px;letter-spacing:3px;color:var(--gold)}.service h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(34px,4vw,58px);font-weight:400;margin:18px 0 15px}.service p{max-width:570px;color:#9d9790;line-height:1.7;font-size:16px}
+.num{font-size:11px;letter-spacing:3px;color:var(--gold)}.service h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(34px,4vw,58px);font-weight:400;margin:18px 0 15px}.service p{max-width:570px;color:#9d9790;line-height:1.7;font-size:16px}.service-img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;margin:0 0 26px;border:1px solid #211d19}.service-img.real{object-position:center}.about-photo{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:32px}
 .statement{padding:110px 7%;background:#12100e;text-align:center}.statement blockquote{max-width:1000px;margin:0 auto;font-family:Georgia,'Times New Roman',serif;font-size:clamp(38px,5.5vw,76px);line-height:1.08;font-weight:400}.statement span{display:block;margin-top:30px;color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase}
 .about{background:var(--paper);color:#111;display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw}.about p{color:#514a44}.record{font-family:Georgia,'Times New Roman',serif;font-size:27px!important;color:#15120f!important;line-height:1.35!important;margin-top:30px}
 .process{padding-top:80px}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.step{padding:38px 28px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step b{display:block;color:var(--gold);font-size:11px;letter-spacing:2px;margin-bottom:16px}.step h4{font-size:23px;margin:0 0 12px}.step p{color:#99918a;line-height:1.6;font-size:14px}
@@ -63,6 +63,7 @@ footer{padding:32px 7%;display:flex;justify-content:space-between;gap:20px;flex-
 
 <section class="services">
   <article class="service">
+    <img class="service-img" src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/4e5a8300-0a02-465e-b1c6-940c2c3153a2.jpeg?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjE0NjIwMThiOWI3YzZjYyIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTA4NTQ2NH0.hQ6gwN8591rREMwo0ddv5DBY0srWCM_PJ1XXXGiD7oY" alt="Instalación artística realizada con chocolate">
     <div class="num">01</div>
     <h3>Chocolate Art</h3>
     <p>Murales, instalaciones y reinterpretaciones artísticas realizadas con chocolate. Una experiencia visual, sensorial y participativa.</p>
@@ -78,6 +79,7 @@ footer{padding:32px 7%;display:flex;justify-content:space-between;gap:20px;flex-
     <p>El café convertido en pigmento. Una experiencia creativa para equipos, empresas y eventos donde cada participante forma parte de la obra.</p>
   </article>
   <article class="service">
+    <img class="service-img" src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/214b4e4a-e3f9-44f1-9a91-f925acf99776.jpeg?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiMjc4YmJiOGVjOWI5Y2ZjNCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTA3NTM0Mn0.kwt4gykVf-A7pjM-htvcmYtp1qrSlZ4qUs0ftOTpGWo" alt="Obra artística realizada con vino">
     <div class="num">04</div>
     <h3>WineXperience</h3>
     <p>Pintura con vino, identidad de territorio y creación colectiva en una experiencia especialmente pensada para bodegas, marcas y eventos.</p>
@@ -88,6 +90,7 @@ footer{padding:32px 7%;display:flex;justify-content:space-between;gap:20px;flex-
     <p>Color, textura y producto natural transformados en composiciones contemporáneas, efímeras y de fuerte impacto visual.</p>
   </article>
   <article class="service">
+    <img class="service-img real" src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/fb8f8bc1-261f-480c-8c0e-fa3fdf3ba5a6.webp?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiM2M3MjQyMGQ3ZmJhMTQ2YyIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTExNjE3M30.52DRTEtfLzhnHgWcde4N46CfiCOqng40X7rxHIZhBZU" alt="Diego Zappa trabajando en una obra en directo">
     <div class="num">06</div>
     <h3>Live Art</h3>
     <p>El proceso creativo se convierte en espectáculo. Público, artista y espacio forman parte de una obra que sucede en directo.</p>
@@ -108,6 +111,7 @@ footer{padding:32px 7%;display:flex;justify-content:space-between;gap:20px;flex-
     <p>Artista especializado en acciones de arte colectivo, creación en directo y experiencias donde la gastronomía se transforma en materia artística.</p>
     <p>Sus proyectos se conciben para generar participación, impacto visual y una relación directa entre la obra, el espacio y las personas.</p>
     <p class="record">Autor del récord Guinness del cuadro de chocolate más grande del mundo.</p>
+    <img class="about-photo" src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/25f6a419-5873-47fa-a178-52d75954f78f.jpeg?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNWNlYTdlMGJlZGYyNzQxYiIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTExNDc2M30.8PJ2kKD1LQP_P5TpBEs-Mfd_7O_g_0UNdMYkKRTivKI" alt="Evento artístico en directo de Diego Zappa con público">
   </div>
 </section>
 
