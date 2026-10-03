@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Diego Zappa — arte gastronómico, experiencias en vivo y proyectos artísticos para instituciones, empresas y eventos.">
-<title>Diego Zappa | Arte, gastronomía y experiencias en vivo</title>
+<title>Diego Zappa | Arte y experiencias</title>
 <style>
 :root{--bg:#080808;--paper:#f3efe8;--ink:#f5f1ea;--muted:#aaa29a;--gold:#c6a26c;--line:#28231f}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
@@ -41,126 +41,40 @@ figcaption{font-size:10px;letter-spacing:1.4px;line-height:1.6;color:var(--muted
 @media(max-width:800px){nav{flex-wrap:wrap;row-gap:16px;background:rgba(8,8,8,.94)}.navlinks{width:100%;justify-content:space-between;gap:12px}.navlinks a{font-size:12px;letter-spacing:.6px}section[id]{scroll-margin-top:115px}}
 .live-video{margin:26px 0 30px}.live-video iframe{display:block;width:100%;height:auto;aspect-ratio:16/9;border:1px solid var(--line);background:#000}.live-video figcaption a{color:var(--gold);text-decoration:underline}
 @media(max-width:800px){.navlinks{flex-wrap:wrap;justify-content:flex-start;column-gap:20px;row-gap:12px}.navlinks a{font-size:12px;letter-spacing:.4px}section[id]{scroll-margin-top:150px}}
+.navlinks a[aria-current="page"]{color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:5px}
+.department-heading{padding-top:150px}.department-heading h1{font:400 clamp(48px,7vw,96px)/1 Georgia,serif;letter-spacing:-.04em;margin:20px 0}.department-heading p{color:var(--muted);font-size:18px;line-height:1.7;max-width:760px}
+.departments{display:grid;grid-template-columns:1fr 1fr;gap:36px;border-top:1px solid var(--line)}.department-card{border:1px solid var(--line);padding:38px;display:block}.department-card:hover{border-color:var(--gold)}.department-card h2{font:400 clamp(32px,4vw,52px)/1.1 Georgia,serif;margin:18px 0}.department-card p{color:var(--muted);font-size:17px;line-height:1.7}.department-card .service-link{font-size:14px}
+.home-hero{min-height:68svh;background:radial-gradient(ellipse at 85% 50%,#231c16,#090909 65%)}.home-hero:after{display:none}.home-hero .hero-content{max-width:900px}.home-hero h1{font-size:clamp(66px,9vw,130px)}
+@media(max-width:800px){.department-heading{padding-top:160px}.departments{grid-template-columns:1fr;gap:20px}.department-card{padding:28px}.home-hero{padding-top:180px;min-height:65svh}.home-hero h1{font-size:17vw}}
 </style>
 </head>
 <body>
-<nav>
-  <div class="brand">DIEGO ZAPPA</div>
+<nav aria-label="Navegación principal">
+  <a class="brand" href="index.html">DIEGO ZAPPA</a>
   <div class="navlinks">
-    <a href="#arte-gastronomico">ARTE GASTRONÓMICO</a>
-    <a href="#team-building">TEAM BUILDING</a>
-    <a href="#proyectos">PROYECTOS</a>
-    <a href="#artista">EL ARTISTA</a>
-    <a href="#contacto">CONTACTO</a>
+    <a href="arte-gastronomico.html">ARTE GASTRONÓMICO</a>
+    <a href="team-building.html">TEAM BUILDING</a>
+    <a href="index.html#artista">EL ARTISTA</a>
+    <a href="index.html#contacto">CONTACTO</a>
   </div>
 </nav>
-
-<header class="hero">
-  <img class="hero-bg" src="images/hero-permanente.svg" alt="Diego Zappa creando una obra de arte gastronómico en vivo">
+<header class="hero home-hero">
   <div class="hero-content">
-    <div class="eyebrow">Art · Gastronomy · Live Experience</div>
+    <div class="eyebrow">Diego Zappa · Artista y creador de experiencias</div>
     <h1>EL ARTE<br>SE VIVE.</h1>
-    <p>Arte, gastronomía y experiencias en vivo. Obras creadas para conectar personas, territorio, cultura y emoción.</p>
-    <div class="actions">
-      <a class="btn primary" href="#arte-gastronomico">Ver arte gastronómico</a>
-      <a class="btn" href="#team-building">Team building</a>
-      <a class="btn" href="#contacto">Solicitar propuesta</a>
-    </div>
+    <p>Proyectos artísticos y experiencias para instituciones, empresas y eventos.</p>
+    <div class="actions"><a class="btn primary" href="arte-gastronomico.html">Arte gastronómico</a><a class="btn" href="team-building.html">Team building</a></div>
   </div>
 </header>
-
-<section class="intro" id="arte-gastronomico">
-  <div>
-    <span id="experiencias" aria-hidden="true"></span>
-    <span id="arte" aria-hidden="true"></span>
-    <div class="eyebrow">Arte gastronómico</div>
-    <h2>La materia<br>también cuenta.</h2>
-  </div>
-  <p>Chocolate, jamón, café, vino, frutas, verduras, queso y otros materiales gastronómicos se convierten en lenguaje artístico. Cada proyecto se diseña específicamente para el lugar, la marca, la institución o el evento.</p>
+<section class="departments" aria-label="Departamentos">
+  <a class="department-card" href="arte-gastronomico.html"><div class="eyebrow">Arte gastronómico</div><h2>La materia<br>también cuenta.</h2><p>Obras, modalidades de arte y creaciones en vivo.</p><span class="service-link">Explorar arte gastronómico</span></a>
+  <a class="department-card" href="team-building.html"><div class="eyebrow">Team building</div><h2>Arte que<br>une equipos.</h2><p>Actividades creativas para empresas y grupos.</p><span class="service-link">Explorar team building</span></a>
 </section>
-
-<section class="services" aria-label="Modalidades de arte gastronómico">
-  <article class="service">
-    <figure><a href="images/arte-gastronomico-ayuntamientos.svg" target="_blank" rel="noopener" aria-label="Ampliar cartel de arte gastronómico"><img class="service-img" style="aspect-ratio:auto;object-fit:contain" src="images/arte-gastronomico-ayuntamientos.svg" alt="Diego Zappa junto a un retrato realizado con jamón: propuesta de arte gastronómico para ayuntamientos, fiestas, cultura y turismo" loading="lazy" decoding="async" width="1055" height="1491"></a><figcaption>Arte gastronómico · Propuesta para ayuntamientos</figcaption></figure>
-    <div class="num">01</div><h3>Chocolate Art</h3><p>Murales, mosaicos e instalaciones donde el chocolate se convierte en materia artística. El diseño puede representar el patrimonio de una ciudad, una celebración o la identidad de una marca.</p>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Chocolate%20Art">Consultar esta modalidad</a>
-  </article>
-  <article class="service">
-    <figure><a href="images/jamon.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de Arte con Jamón"><img class="service-img" src="images/jamon.svg" alt="Referencia visual de creación de una obra con jamón ante el público" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Referencia visual · Arte gastronómico en vivo</figcaption></figure>
-    <div class="num">02</div><h3>Arte con Jamón</h3><p>Grandes composiciones que unen gastronomía española, cultura y territorio. La obra se crea ante el público y puede inspirarse en la arquitectura, las tradiciones y los símbolos de cada localidad.</p>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Jamón">Consultar esta modalidad</a>
-  </article>
-  <article class="service">
-    <div class="num">03</div><h3>Arte con Café</h3><p>El café como pigmento para crear pinturas sobre papel de acuarela. Obras inspiradas en el producto, el territorio o la identidad de una marca, realizadas por Diego Zappa para exposiciones, presentaciones y eventos.</p>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Caf%C3%A9">Consultar esta modalidad</a>
-  </article>
-  <article class="service">
-    <div class="num">04</div><h3>Arte con Vino</h3><p>Pinturas que utilizan el vino como materia artística. Viñedos, paisaje y patrimonio inspiran obras realizadas por Diego Zappa para bodegas, encuentros de marca y eventos culturales.</p>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Vino">Consultar esta modalidad</a>
-  </article>
-  <article class="service">
-    <figure><a href="images/frutas-verduras.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de Frutas & Verduras"><img class="service-img" src="images/frutas-verduras.svg" alt="Propuesta visual de retrato realizado con frutas y verduras" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Imagen conceptual · Productos del territorio</figcaption></figure>
-    <div class="num">05</div><h3>Frutas & Verduras</h3><p>Retratos y composiciones de gran formato creados con productos hortofrutícolas. Color, textura y producto local para ferias, presentaciones y acciones gastronómicas en directo.</p>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Frutas%20%26%20Verduras">Consultar esta modalidad</a>
-  </article>
-  <article class="service">
-    <figure><a href="images/queso.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de Arte con Queso"><img class="service-img" src="images/queso.svg" alt="Propuesta visual de retrato realizado con diferentes quesos" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Imagen conceptual · Nuevos formatos</figcaption></figure>
-    <div class="num">06</div><h3>Arte con Queso</h3><p>El queso se transforma en un medio creativo para retratos, murales y piezas de gran formato. Una propuesta personalizada para queserías, territorios productores y eventos gastronómicos.</p>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Queso">Consultar esta modalidad</a>
-  </article>
-  <article class="service">
-    <figure><a href="images/live-art.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de Live Art"><img class="service-img" src="images/live-art.svg" alt="Referencia visual de una intervención artística con público" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Referencia visual · Arte y público</figcaption></figure>
-    <div class="num">07</div><h3>Live Art</h3><p>El proceso creativo forma parte del espectáculo. Una obra que nace en directo, conecta con el lugar y convierte al público en testigo de su transformación.</p>
-    <figure class="live-video">
-      <iframe src="https://www.youtube-nocookie.com/embed/EQvLwB8w5jM" title="Vídeo de Live Art · Diego Zappa" width="560" height="315" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      <figcaption>Live Art · <a href="https://youtu.be/EQvLwB8w5jM" target="_blank" rel="noopener">Ver vídeo en YouTube</a></figcaption>
-    </figure>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Live%20Art">Consultar esta modalidad</a>
-  </article>
-</section>
-
-<section class="intro team-intro" id="team-building">
-  <div><div class="eyebrow">Team building</div><h2>Arte que<br>une equipos.</h2></div>
-  <div><p>Actividades para empresas y grupos en las que los participantes crean juntos. Un concepto común, una composición por módulos y una obra final que reúne las aportaciones del equipo.</p><a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Team%20Building">Solicitar una actividad para mi equipo</a></div>
-</section>
-<section class="services team-services" aria-label="Actividades de team building">
-  <article class="service">
-    <figure><a href="images/cafe-equipo.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de CaféXperience"><img class="service-img" src="images/cafe-equipo.svg" alt="Referencia visual de un equipo creando una obra con café" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Referencia visual · Creación en equipo</figcaption></figure>
-    <div class="num">01</div><h3>CaféXperience</h3><p>El café se utiliza como pigmento para crear una obra colectiva sobre papel de acuarela. Una experiencia de creatividad compartida, adaptable al equipo, al espacio y a la identidad de la empresa.</p>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20CaféXperience">Consultar este team building</a>
-  </article>
-  <article class="service">
-    <figure><a href="images/vino-equipo.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de WineXperience"><img class="service-img" src="images/vino-equipo.svg" alt="Referencia visual de pintura colectiva con vino" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Referencia visual · Pintura con vino</figcaption></figure>
-    <div class="num">02</div><h3>WineXperience</h3><p>Una actividad de team building en la que los participantes pintan con vino y colaboran en una obra colectiva. La composición y la dinámica se adaptan al equipo y a la identidad de la empresa.</p>
-    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20WineXperience">Consultar este team building</a>
-  </article>
-</section>
-
-<section class="projects" id="proyectos">
-  <div class="eyebrow">Proyectos a medida</div>
-  <h2>Una idea propia.<br>Una experiencia memorable.</h2>
-  <p>Cada propuesta comienza con el lugar, el producto y las personas. El diseño y la dinámica se adaptan al evento para convertir su identidad en una creación artística.</p>
-  <div class="project-feature">
-    <figure><a href="images/chocolate-durango.svg" target="_blank" rel="noopener"><img src="images/chocolate-durango.svg" alt="Visualización conceptual de un mural navideño de chocolate para Durango" loading="lazy" width="1600" height="800"></a><figcaption>Durango · Propuesta conceptual de mural navideño</figcaption></figure>
-    <div><div class="eyebrow">Chocolate · Patrimonio · Navidad</div><h3>El territorio convertido en obra.</h3><p>Una propuesta de mosaico de chocolate blanco pintado con chocolate negro, inspirada en la basílica de Santa María de Uribarri y el arco de Santa Ana. El proyecto plantea una creación en vivo y una presentación en un espacio emblemático de la villa.</p><a class="service-link" href="#contacto">Crear una propuesta para mi ciudad ↗</a></div>
-  </div>
-  <div class="project-types">
-    <div><h3>Cultura & territorio</h3><p>Propuestas para ayuntamientos, fiestas y programación cultural. Patrimonio, arquitectura y gastronomía local como punto de partida.</p></div>
-    <div><h3>Marcas & eventos</h3><p>Acciones artísticas en ferias y presentaciones de producto. La identidad de la marca se integra en una obra creada para la ocasión.</p></div>
-    <div><h3>Encuentros institucionales</h3><p>Conceptos para hoteles, recepciones y promoción cultural de España. Obras que crean un diálogo entre gastronomía, cultura y lugar.</p></div>
-  </div>
-</section>
-
-<section class="statement">
-  <blockquote>“No se trata solo de contemplar una obra. Se trata de vivir cómo nace.”</blockquote>
-  <span>Diego Zappa · Arte que conecta</span>
-</section>
-
 <section class="about" id="artista">
   <div>
     <div class="eyebrow">El artista</div>
     <h2>Diego<br>Zappa</h2>
-    <figure><img class="about-photo" src="images/artista.svg" alt="Retrato ilustrado de Diego Zappa en su universo de arte y gastronomía" loading="lazy" width="598" height="1122"><figcaption>Retrato de presentación · Diego Zappa</figcaption></figure>
+
   </div>
   <div>
     <p>Artista visual y creador de experiencias afincado en Zaragoza. Su trabajo une pintura, escultura y acciones en vivo, con la gastronomía como una de sus materias de expresión.</p>
@@ -169,17 +83,6 @@ figcaption{font-size:10px;letter-spacing:1.4px;line-height:1.6;color:var(--muted
     <p class="record">Autor del récord Guinness del cuadro de chocolate más grande del mundo.</p>
 </div>
 </section>
-
-<section class="process">
-  <div class="eyebrow">Cómo trabajamos</div>
-  <div class="process-grid">
-    <div class="step"><b>01</b><h4>Concepto</h4><p>Una idea diseñada alrededor del territorio, producto, marca o celebración.</p></div>
-    <div class="step"><b>02</b><h4>Diseño</h4><p>Composición visual, formato, materiales y experiencia adaptados a cada proyecto.</p></div>
-    <div class="step"><b>03</b><h4>Acción en vivo</h4><p>La creación se convierte en un acontecimiento artístico abierto al público o al equipo.</p></div>
-    <div class="step"><b>04</b><h4>Obra & recuerdo</h4><p>El resultado permanece como imagen, experiencia compartida y contenido de alto impacto.</p></div>
-  </div>
-</section>
-
 <section class="contact" id="contacto">
   <div class="eyebrow">Proyectos & colaboraciones</div>
   <h2>¿Creamos algo<br>extraordinario?</h2>
@@ -188,7 +91,6 @@ figcaption{font-size:10px;letter-spacing:1.4px;line-height:1.6;color:var(--muted
   <a class="phone" href="tel:+34670635659">+34 670 635 659</a>
   <a class="btn primary" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20art%C3%ADstica%20para%20mi%20evento">Cuéntame tu proyecto</a>
 </section>
-
 <footer>
   <div>DIEGO ZAPPA</div>
   <div>ART & GASTRONOMIC XPERIENCES</div>
