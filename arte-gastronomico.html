@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Diego Zappa — arte gastronómico, experiencias en vivo y proyectos artísticos para instituciones, empresas y eventos.">
+<title>Arte gastronómico | Diego Zappa</title>
+<style>
+:root{--bg:#080808;--paper:#f3efe8;--ink:#f5f1ea;--muted:#aaa29a;--gold:#c6a26c;--line:#28231f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+nav{position:fixed;z-index:20;top:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:24px 6%;background:linear-gradient(180deg,rgba(0,0,0,.65),transparent);backdrop-filter:blur(2px)}
+.brand{font-size:17px;font-weight:800;letter-spacing:4px}.navlinks{display:flex;gap:26px}.navlinks a{font-size:11px;letter-spacing:1.8px;color:#e5dfd7}
+.hero{min-height:100svh;position:relative;display:flex;align-items:flex-end;padding:12vh 7% 9vh;overflow:hidden;background:#090909}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,5,5,.88) 0%,rgba(5,5,5,.46) 37%,rgba(5,5,5,.10) 67%,rgba(5,5,5,.22) 100%),linear-gradient(0deg,rgba(5,5,5,.72),transparent 42%)}
+.hero-content{position:relative;z-index:2;max-width:690px}.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.hero h1{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(66px,10vw,146px);line-height:.82;letter-spacing:-.065em;margin:20px 0 26px}
+.hero p{font-size:clamp(17px,1.8vw,22px);line-height:1.55;color:#e0d8cf;max-width:620px;margin:0 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-block;padding:15px 21px;border:1px solid rgba(255,255,255,.42);font-size:11px;letter-spacing:2px;text-transform:uppercase}.btn.primary{background:var(--paper);color:#111;border-color:var(--paper)}
+section{padding:100px 7%}.intro{display:grid;grid-template-columns:1fr 1fr;gap:9vw;align-items:end;border-bottom:1px solid var(--line)}
+.intro h2,.about h2,.contact h2{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-size:clamp(46px,7vw,92px);line-height:.95;letter-spacing:-.045em;margin:16px 0}.intro p,.about p,.contact p{font-size:18px;line-height:1.75;color:var(--muted)}
+.services{display:grid;grid-template-columns:repeat(2,1fr);padding-top:42px;padding-bottom:42px}
+.service{padding:48px 5vw 54px 0;border-top:1px solid var(--line);min-height:250px}.service:nth-child(odd){border-right:1px solid var(--line);padding-right:6vw}.service:nth-child(even){padding-left:6vw}
+.num{font-size:11px;letter-spacing:3px;color:var(--gold)}.service h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(34px,4vw,58px);font-weight:400;margin:18px 0 15px}.service p{max-width:570px;color:#9d9790;line-height:1.7;font-size:16px}.service-img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;margin:0 0 26px;border:1px solid #211d19}.service-img.real{object-position:center}.about-photo{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-top:32px}
+.statement{padding:110px 7%;background:#12100e;text-align:center}.statement blockquote{max-width:1000px;margin:0 auto;font-family:Georgia,'Times New Roman',serif;font-size:clamp(38px,5.5vw,76px);line-height:1.08;font-weight:400}.statement span{display:block;margin-top:30px;color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase}
+.about{background:var(--paper);color:#111;display:grid;grid-template-columns:.9fr 1.1fr;gap:9vw}.about p{color:#514a44}.record{font-family:Georgia,'Times New Roman',serif;font-size:27px!important;color:#15120f!important;line-height:1.35!important;margin-top:30px}
+.process{padding-top:80px}.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.step{padding:38px 28px;border-right:1px solid var(--line)}.step:last-child{border-right:0}.step b{display:block;color:var(--gold);font-size:11px;letter-spacing:2px;margin-bottom:16px}.step h4{font-size:23px;margin:0 0 12px}.step p{color:#99918a;line-height:1.6;font-size:14px}
+.contact{text-align:center;padding-top:120px;padding-bottom:120px;background:radial-gradient(circle at 50% 0,#332115 0,#0a0a0a 56%)}.contact p{max-width:650px;margin:18px auto 30px}.contact .mail{font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,3vw,38px);border-bottom:1px solid #7f6a4d;padding-bottom:6px}
+footer{padding:32px 7%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#746d67;font-size:10px;letter-spacing:1.8px;border-top:1px solid #171717}
+@media(max-width:800px){nav{padding:20px 6%}.navlinks{display:none}.hero{padding:16vh 7% 8vh;align-items:flex-end}.hero-bg{object-position:61% center}.hero:after{background:linear-gradient(0deg,rgba(5,5,5,.93) 0%,rgba(5,5,5,.57) 48%,rgba(5,5,5,.18) 100%)}.hero-content{max-width:94%}.hero h1{font-size:17vw}.intro,.about{grid-template-columns:1fr;gap:24px}.services{grid-template-columns:1fr}.service,.service:nth-child(odd),.service:nth-child(even){border-right:0;padding:38px 0}.process-grid{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:0}}
+
+section[id]{scroll-margin-top:80px}
+figure{margin:0}.service-img,.about-photo,.project-feature img{height:auto}.service figure{margin-bottom:30px}.service-img{aspect-ratio:4/3;margin:0;transition:transform .6s ease}.service figure a{display:block;overflow:hidden}.service figure a:hover img{transform:scale(1.035)}
+figcaption{font-size:10px;letter-spacing:1.4px;line-height:1.6;color:var(--muted);margin-top:10px;text-transform:uppercase}.service-link{display:inline-block;margin-top:12px;color:var(--gold);font-size:11px;letter-spacing:1.5px;border-bottom:1px solid #645139;padding-bottom:7px;text-transform:uppercase}
+.projects{background:#16120f}.projects h2{font:400 clamp(42px,6vw,76px)/1 Georgia,serif;letter-spacing:-.04em;max-width:800px;margin:22px 0}.projects>p{color:var(--muted);max-width:700px;font-size:18px;line-height:1.7}.project-feature{display:grid;grid-template-columns:1.6fr 1fr;gap:48px;align-items:center;margin-top:50px}.project-feature img{width:100%;display:block}.project-feature h3{font:400 36px/1.1 Georgia,serif;margin:15px 0}.project-feature p{color:var(--muted);line-height:1.7}.project-types{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-top:60px;padding-top:36px;border-top:1px solid #3a2d23}.project-types h3{font:400 28px Georgia,serif}.project-types p{color:var(--muted);line-height:1.7}
+.about-photo{aspect-ratio:3/4;object-position:center 24%;margin-top:30px}.about figcaption{color:#6b5a49}.contact .phone{display:block;width:fit-content;margin:24px auto;color:var(--gold);font-size:18px;letter-spacing:2px}.contact .btn{margin-top:20px}
+@media(max-width:800px){section{padding-top:65px;padding-bottom:65px}.project-feature,.project-types{grid-template-columns:1fr;gap:28px}.service-img{aspect-ratio:4/3}.about-photo{max-height:600px}.contact{padding-top:75px;padding-bottom:75px}.brand{font-size:15px;letter-spacing:3px}.navlinks{display:flex;gap:14px}.navlinks a{font-size:9px;letter-spacing:1px}.navlinks a[href="#artista"],.navlinks a[href="#proyectos"]{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.service-img{transition:none}}
+
+.team-intro,.team-services{background:#151412}.team-intro{border-top:1px solid #4b3b28}.team-intro .service-link{font-size:14px;letter-spacing:.5px}.navlinks a{white-space:nowrap}
+@media(max-width:800px){nav{flex-wrap:wrap;row-gap:16px;background:rgba(8,8,8,.94)}.navlinks{width:100%;justify-content:space-between;gap:12px}.navlinks a{font-size:12px;letter-spacing:.6px}section[id]{scroll-margin-top:115px}}
+.live-video{margin:26px 0 30px}.live-video iframe{display:block;width:100%;height:auto;aspect-ratio:16/9;border:1px solid var(--line);background:#000}.live-video figcaption a{color:var(--gold);text-decoration:underline}
+@media(max-width:800px){.navlinks{flex-wrap:wrap;justify-content:flex-start;column-gap:20px;row-gap:12px}.navlinks a{font-size:12px;letter-spacing:.4px}section[id]{scroll-margin-top:150px}}
+.navlinks a[aria-current="page"]{color:var(--gold);border-bottom:1px solid var(--gold);padding-bottom:5px}
+.department-heading{padding-top:150px}.department-heading h1{font:400 clamp(48px,7vw,96px)/1 Georgia,serif;letter-spacing:-.04em;margin:20px 0}.department-heading p{color:var(--muted);font-size:18px;line-height:1.7;max-width:760px}
+.departments{display:grid;grid-template-columns:1fr 1fr;gap:36px;border-top:1px solid var(--line)}.department-card{border:1px solid var(--line);padding:38px;display:block}.department-card:hover{border-color:var(--gold)}.department-card h2{font:400 clamp(32px,4vw,52px)/1.1 Georgia,serif;margin:18px 0}.department-card p{color:var(--muted);font-size:17px;line-height:1.7}.department-card .service-link{font-size:14px}
+.home-hero{min-height:68svh;background:radial-gradient(ellipse at 85% 50%,#231c16,#090909 65%)}.home-hero:after{display:none}.home-hero .hero-content{max-width:900px}.home-hero h1{font-size:clamp(66px,9vw,130px)}
+@media(max-width:800px){.department-heading{padding-top:160px}.departments{grid-template-columns:1fr;gap:20px}.department-card{padding:28px}.home-hero{padding-top:180px;min-height:65svh}.home-hero h1{font-size:17vw}}
+</style>
+</head>
+<body>
+<nav aria-label="Navegación principal">
+  <a class="brand" href="index.html">DIEGO ZAPPA</a>
+  <div class="navlinks">
+    <a href="arte-gastronomico.html" aria-current="page">ARTE GASTRONÓMICO</a>
+    <a href="team-building.html">TEAM BUILDING</a>
+    <a href="index.html#artista">EL ARTISTA</a>
+    <a href="index.html#contacto">CONTACTO</a>
+  </div>
+</nav>
+<section class="intro department-heading" id="arte-gastronomico">
+  <div>
+    <span id="experiencias" aria-hidden="true"></span>
+    <span id="arte" aria-hidden="true"></span>
+    <div class="eyebrow">Arte gastronómico</div>
+    <h1>Arte<br>gastronómico.</h1>
+  </div>
+  <p>Chocolate, jamón, café, vino, frutas, verduras, queso y otros materiales gastronómicos se convierten en lenguaje artístico. Cada proyecto se diseña específicamente para el lugar, la marca, la institución o el evento.</p>
+</section>
+
+<section class="services" aria-label="Modalidades de arte gastronómico">
+  <article class="service">
+    <figure><a href="images/arte-gastronomico-ayuntamientos.svg" target="_blank" rel="noopener" aria-label="Ampliar cartel de arte gastronómico"><img class="service-img" style="aspect-ratio:auto;object-fit:contain" src="images/arte-gastronomico-ayuntamientos.svg" alt="Diego Zappa junto a un retrato realizado con jamón: propuesta de arte gastronómico para ayuntamientos, fiestas, cultura y turismo" loading="lazy" decoding="async" width="1055" height="1491"></a><figcaption>Arte gastronómico · Propuesta para ayuntamientos</figcaption></figure>
+    <div class="num">01</div><h3>Chocolate Art</h3><p>Murales, mosaicos e instalaciones donde el chocolate se convierte en materia artística. El diseño puede representar el patrimonio de una ciudad, una celebración o la identidad de una marca.</p>
+    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Chocolate%20Art">Consultar esta modalidad</a>
+  </article>
+  <article class="service">
+    <figure><a href="images/jamon.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de Arte con Jamón"><img class="service-img" src="images/jamon.svg" alt="Referencia visual de creación de una obra con jamón ante el público" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Referencia visual · Arte gastronómico en vivo</figcaption></figure>
+    <div class="num">02</div><h3>Arte con Jamón</h3><p>Grandes composiciones que unen gastronomía española, cultura y territorio. La obra se crea ante el público y puede inspirarse en la arquitectura, las tradiciones y los símbolos de cada localidad.</p>
+    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Jamón">Consultar esta modalidad</a>
+  </article>
+  <article class="service">
+    <div class="num">03</div><h3>Arte con Café</h3><p>El café como pigmento para crear pinturas sobre papel de acuarela. Obras inspiradas en el producto, el territorio o la identidad de una marca, realizadas por Diego Zappa para exposiciones, presentaciones y eventos.</p>
+    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Caf%C3%A9">Consultar esta modalidad</a>
+  </article>
+  <article class="service">
+    <div class="num">04</div><h3>Arte con Vino</h3><p>Pinturas que utilizan el vino como materia artística. Viñedos, paisaje y patrimonio inspiran obras realizadas por Diego Zappa para bodegas, encuentros de marca y eventos culturales.</p>
+    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Vino">Consultar esta modalidad</a>
+  </article>
+  <article class="service">
+    <figure><a href="images/frutas-verduras.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de Frutas & Verduras"><img class="service-img" src="images/frutas-verduras.svg" alt="Propuesta visual de retrato realizado con frutas y verduras" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Imagen conceptual · Productos del territorio</figcaption></figure>
+    <div class="num">05</div><h3>Frutas & Verduras</h3><p>Retratos y composiciones de gran formato creados con productos hortofrutícolas. Color, textura y producto local para ferias, presentaciones y acciones gastronómicas en directo.</p>
+    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Frutas%20%26%20Verduras">Consultar esta modalidad</a>
+  </article>
+  <article class="service">
+    <figure><a href="images/queso.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de Arte con Queso"><img class="service-img" src="images/queso.svg" alt="Propuesta visual de retrato realizado con diferentes quesos" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Imagen conceptual · Nuevos formatos</figcaption></figure>
+    <div class="num">06</div><h3>Arte con Queso</h3><p>El queso se transforma en un medio creativo para retratos, murales y piezas de gran formato. Una propuesta personalizada para queserías, territorios productores y eventos gastronómicos.</p>
+    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Queso">Consultar esta modalidad</a>
+  </article>
+  <article class="service">
+    <figure><a href="images/live-art.svg" target="_blank" rel="noopener" aria-label="Ampliar imagen de Live Art"><img class="service-img" src="images/live-art.svg" alt="Referencia visual de una intervención artística con público" loading="lazy" decoding="async" width="800" height="600"></a><figcaption>Referencia visual · Arte y público</figcaption></figure>
+    <div class="num">07</div><h3>Live Art</h3><p>El proceso creativo forma parte del espectáculo. Una obra que nace en directo, conecta con el lugar y convierte al público en testigo de su transformación.</p>
+    <figure class="live-video">
+      <iframe src="https://www.youtube-nocookie.com/embed/EQvLwB8w5jM" title="Vídeo de Live Art · Diego Zappa" width="560" height="315" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <figcaption>Live Art · <a href="https://youtu.be/EQvLwB8w5jM" target="_blank" rel="noopener">Ver vídeo en YouTube</a></figcaption>
+    </figure>
+    <a class="service-link" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Live%20Art">Consultar esta modalidad</a>
+  </article>
+</section>
+
+<section class="projects" id="proyectos">
+  <div class="eyebrow">Proyectos a medida</div>
+  <h2>Una idea propia.<br>Una experiencia memorable.</h2>
+  <p>Cada propuesta comienza con el lugar, el producto y las personas. El diseño y la dinámica se adaptan al evento para convertir su identidad en una creación artística.</p>
+  <div class="project-feature">
+    <figure><a href="images/chocolate-durango.svg" target="_blank" rel="noopener"><img src="images/chocolate-durango.svg" alt="Visualización conceptual de un mural navideño de chocolate para Durango" loading="lazy" width="1600" height="800"></a><figcaption>Durango · Propuesta conceptual de mural navideño</figcaption></figure>
+    <div><div class="eyebrow">Chocolate · Patrimonio · Navidad</div><h3>El territorio convertido en obra.</h3><p>Una propuesta de mosaico de chocolate blanco pintado con chocolate negro, inspirada en la basílica de Santa María de Uribarri y el arco de Santa Ana. El proyecto plantea una creación en vivo y una presentación en un espacio emblemático de la villa.</p><a class="service-link" href="#contacto">Crear una propuesta para mi ciudad ↗</a></div>
+  </div>
+  <div class="project-types">
+    <div><h3>Cultura & territorio</h3><p>Propuestas para ayuntamientos, fiestas y programación cultural. Patrimonio, arquitectura y gastronomía local como punto de partida.</p></div>
+    <div><h3>Marcas & eventos</h3><p>Acciones artísticas en ferias y presentaciones de producto. La identidad de la marca se integra en una obra creada para la ocasión.</p></div>
+    <div><h3>Encuentros institucionales</h3><p>Conceptos para hoteles, recepciones y promoción cultural de España. Obras que crean un diálogo entre gastronomía, cultura y lugar.</p></div>
+  </div>
+</section>
+
+<section class="about"><div><div class="eyebrow">Diego Zappa</div><h2>El artista</h2></div><div>    <figure><img class="about-photo" src="images/artista.svg" alt="Retrato ilustrado de Diego Zappa en su universo de arte y gastronomía" loading="lazy" width="598" height="1122"><figcaption>Retrato de presentación · Diego Zappa</figcaption></figure></div></section>
+<section class="statement">
+  <blockquote>“No se trata solo de contemplar una obra. Se trata de vivir cómo nace.”</blockquote>
+  <span>Diego Zappa · Arte que conecta</span>
+</section>
+
+<section class="process">
+  <div class="eyebrow">Cómo trabajamos</div>
+  <div class="process-grid">
+    <div class="step"><b>01</b><h4>Concepto</h4><p>Una idea diseñada alrededor del territorio, producto, marca o celebración.</p></div>
+    <div class="step"><b>02</b><h4>Diseño</h4><p>Composición visual, formato, materiales y experiencia adaptados a cada proyecto.</p></div>
+    <div class="step"><b>03</b><h4>Acción en vivo</h4><p>La creación se convierte en un acontecimiento artístico abierto al público o al equipo.</p></div>
+    <div class="step"><b>04</b><h4>Obra & recuerdo</h4><p>El resultado permanece como imagen, experiencia compartida y contenido de alto impacto.</p></div>
+  </div>
+</section>
+<section class="contact" id="contacto">
+  <div class="eyebrow">Proyectos & colaboraciones</div>
+  <h2>¿Creamos algo<br>extraordinario?</h2>
+  <p>Propuestas personalizadas para ayuntamientos, instituciones, empresas, hoteles, marcas, ferias y espacios culturales.</p>
+  <a class="mail" href="mailto:diegozappazgz@gmail.com">diegozappazgz@gmail.com</a>
+  <a class="phone" href="tel:+34670635659">+34 670 635 659</a>
+  <a class="btn primary" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20art%C3%ADstica%20para%20mi%20evento">Cuéntame tu proyecto</a>
+</section>
+<footer>
+  <div>DIEGO ZAPPA</div>
+  <div>ART & GASTRONOMIC XPERIENCES</div>
+  <div>© 2026</div>
+</footer>
+</body>
+</html>
