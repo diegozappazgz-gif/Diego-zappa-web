@@ -46,13 +46,15 @@ figcaption{font-size:10px;letter-spacing:1.4px;line-height:1.6;color:var(--muted
 .departments{display:grid;grid-template-columns:1fr 1fr;gap:36px;border-top:1px solid var(--line)}.department-card{border:1px solid var(--line);padding:38px;display:block}.department-card:hover{border-color:var(--gold)}.department-card h2{font:400 clamp(32px,4vw,52px)/1.1 Georgia,serif;margin:18px 0}.department-card p{color:var(--muted);font-size:17px;line-height:1.7}.department-card .service-link{font-size:14px}
 .home-hero{min-height:68svh;background:radial-gradient(ellipse at 85% 50%,#231c16,#090909 65%)}.home-hero:after{display:none}.home-hero .hero-content{max-width:900px}.home-hero h1{font-size:clamp(66px,9vw,130px)}
 @media(max-width:800px){.department-heading{padding-top:160px}.departments{grid-template-columns:1fr;gap:20px}.department-card{padding:28px}.home-hero{padding-top:180px;min-height:65svh}.home-hero h1{font-size:17vw}}
+
+.art-menu{position:relative}.art-menu summary{cursor:pointer;font-size:11px;letter-spacing:1.8px;color:#e5dfd7;list-style:none;white-space:nowrap}.art-menu summary::-webkit-details-marker{display:none}.art-menu summary:after{content:"⌄";margin-left:8px}.art-menu-panel{position:absolute;top:calc(100% + 14px);left:0;min-width:230px;padding:12px;background:#15110f;border:1px solid #65503a;box-shadow:0 14px 30px #0009;display:grid;gap:6px}.art-menu-panel a{padding:12px!important;font-size:14px!important;letter-spacing:.2px!important;text-transform:none;color:var(--ink)}.art-menu-panel a:hover,.art-menu-panel a:focus-visible{background:#30251c}.art-menu summary:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}@media(max-width:800px){.art-menu summary{font-size:12px;letter-spacing:.4px}.art-menu-panel{min-width:220px}}
 </style>
 </head>
 <body>
 <nav aria-label="Navegación principal">
   <a class="brand" href="index.html">DIEGO ZAPPA</a>
   <div class="navlinks">
-    <a href="arte-gastronomico.html">ARTE GASTRONÓMICO</a>
+    <details class="art-menu"><summary>ARTE GASTRONÓMICO</summary><div class="art-menu-panel"><a href="arte-gastronomico.html">Todas las modalidades</a><a href="arte-con-chocolate.html">Arte con Chocolate</a></div></details>
     <a href="team-building.html">TEAM BUILDING</a>
     <a href="index.html#artista">EL ARTISTA</a>
     <a href="index.html#contacto">CONTACTO</a>
