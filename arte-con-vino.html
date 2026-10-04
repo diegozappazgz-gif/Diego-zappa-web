@@ -1,11 +1,4 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Diego Zappa — arte gastronómico, experiencias en vivo y proyectos artísticos para instituciones, empresas y eventos.">
-<title>Diego Zappa | Arte y experiencias</title>
-<style>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Arte con Vino de Diego Zappa. Pinturas inspiradas en viñedos, paisaje, patrimonio y bodegas. Imagen de Cariñena y vídeo."><title>Arte con Vino | Diego Zappa</title><style>
 :root{--bg:#080808;--paper:#f3efe8;--ink:#f5f1ea;--muted:#aaa29a;--gold:#c6a26c;--line:#28231f}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
 nav{position:fixed;z-index:20;top:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:24px 6%;background:linear-gradient(180deg,rgba(0,0,0,.65),transparent);backdrop-filter:blur(2px)}
@@ -46,15 +39,16 @@ figcaption{font-size:10px;letter-spacing:1.4px;line-height:1.6;color:var(--muted
 .departments{display:grid;grid-template-columns:1fr 1fr;gap:36px;border-top:1px solid var(--line)}.department-card{border:1px solid var(--line);padding:38px;display:block}.department-card:hover{border-color:var(--gold)}.department-card h2{font:400 clamp(32px,4vw,52px)/1.1 Georgia,serif;margin:18px 0}.department-card p{color:var(--muted);font-size:17px;line-height:1.7}.department-card .service-link{font-size:14px}
 .home-hero{min-height:68svh;background:radial-gradient(ellipse at 85% 50%,#231c16,#090909 65%)}.home-hero:after{display:none}.home-hero .hero-content{max-width:900px}.home-hero h1{font-size:clamp(66px,9vw,130px)}
 @media(max-width:800px){.department-heading{padding-top:160px}.departments{grid-template-columns:1fr;gap:20px}.department-card{padding:28px}.home-hero{padding-top:180px;min-height:65svh}.home-hero h1{font-size:17vw}}
+.department-cover{display:block;width:100%;height:auto;max-height:650px;object-fit:cover;aspect-ratio:16/9}.department-image{padding:0 7% 42px}
 
 .art-menu{position:relative}.art-menu summary{cursor:pointer;font-size:11px;letter-spacing:1.8px;color:#e5dfd7;list-style:none;white-space:nowrap}.art-menu summary::-webkit-details-marker{display:none}.art-menu summary:after{content:"⌄";margin-left:8px}.art-menu-panel{position:absolute;top:calc(100% + 14px);left:0;min-width:230px;padding:12px;background:#15110f;border:1px solid #65503a;box-shadow:0 14px 30px #0009;display:grid;gap:6px}.art-menu-panel a{padding:12px!important;font-size:14px!important;letter-spacing:.2px!important;text-transform:none;color:var(--ink)}.art-menu-panel a:hover,.art-menu-panel a:focus-visible{background:#30251c}.art-menu summary:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:5px}@media(max-width:800px){.art-menu summary{font-size:12px;letter-spacing:.4px}.art-menu-panel{min-width:220px}}
 
+.chocolate-heading{padding-bottom:55px}.chocolate-heading .back-link{display:inline-block;font-size:14px;color:var(--gold);margin-bottom:30px}.chocolate-heading h1{max-width:960px}.chocolate-heading p{max-width:760px}.chocolate-gallery{padding-top:20px}.gallery-heading{font:400 clamp(32px,4vw,52px)/1.1 Georgia,serif;margin:15px 0 18px}.gallery-lead{font-size:18px;line-height:1.7;color:var(--muted);max-width:720px;margin-bottom:40px}.chocolate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 28px}.chocolate-card{min-width:0}.chocolate-card a{display:block;background:#15110f;border:1px solid var(--line)}.chocolate-card img{display:block;width:100%;height:auto;object-fit:contain}.chocolate-card figcaption{text-transform:none;font-size:16px;letter-spacing:0;line-height:1.5;margin-top:14px}.chocolate-card figcaption strong{display:block;color:var(--ink);font-weight:400}.chocolate-card figcaption span{display:block;font-size:14px;color:var(--gold);margin-top:4px}.chocolate-card:first-child{grid-column:1/-1}.chocolate-card:first-child img{max-height:700px}.concept-gallery{border-top:1px solid var(--line)}.concept-gallery .chocolate-card:first-child{grid-column:auto}.concept-gallery .chocolate-card:first-child img{max-height:none}@media(max-width:800px){.chocolate-grid{grid-template-columns:1fr;gap:32px}.chocolate-card:first-child{grid-column:auto}.chocolate-heading{padding-bottom:32px}.chocolate-gallery{padding-top:20px}.concept-gallery{padding-top:55px}}
+
 .navlinks{flex-wrap:wrap;align-items:center;gap:18px}.navlinks a,.art-menu summary{font-size:14px;letter-spacing:.4px}@media(max-width:800px){.navlinks a,.art-menu summary{font-size:12px}}
-.interior-hero{padding:180px 7% 70px;display:grid;grid-template-columns:1.1fr 1fr;gap:6vw;align-items:center}.interior-hero h1{font:400 clamp(48px,6.8vw,100px)/1.02 Georgia,serif;letter-spacing:-.045em;margin:24px 0}.interior-hero p{font-size:18px;line-height:1.75;color:var(--muted)}.interior-hero img{width:100%;height:auto;display:block}.interior-hero figcaption{font-size:14px;letter-spacing:0;text-transform:none}.interior-hero .btn{font-size:14px;letter-spacing:.5px}.styles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}.style-item{padding:32px 0;border-top:1px solid var(--line)}.style-item h3{font:400 34px/1.2 Georgia,serif;margin:16px 0}.style-item p{font-size:17px;line-height:1.75;color:var(--muted)}.section-title{font:400 clamp(38px,5vw,68px)/1.1 Georgia,serif;margin:20px 0 40px}.interior-note{font-size:18px;line-height:1.8;color:var(--muted);max-width:750px}.interior-custom{background:#151412}.interior-home{background:#151412}.interior-home p{font-size:18px;color:var(--muted);line-height:1.8;max-width:700px}.interior-home .btn{font-size:14px;letter-spacing:.5px}.navlinks{flex-wrap:wrap;align-items:center;gap:18px}.navlinks a,.art-menu summary{font-size:14px;letter-spacing:.4px}.contact .btn{font-size:14px;letter-spacing:.5px}.step b{font-size:14px}.step p{font-size:16px}@media(max-width:800px){.interior-hero{grid-template-columns:1fr;padding-top:205px;gap:32px}.interior-hero h1{font-size:clamp(46px,11vw,78px)}.styles-grid{grid-template-columns:1fr}.navlinks a,.art-menu summary{font-size:12px}.interior-hero figure{max-width:650px}}
-</style>
-</head>
-<body>
-<nav aria-label="Navegación principal">
+
+.wine-photo{max-width:900px;margin:0 auto}.wine-photo img{width:100%;height:auto;display:block}.wine-photo a{display:block}.wine-photo figcaption{font-size:16px;letter-spacing:0;text-transform:none}.wine-video-section{border-top:1px solid var(--line)}.wine-video-section .live-video{max-width:1100px}.wine-video-section figcaption{font-size:16px;letter-spacing:0;text-transform:none}.wine-page-contact .btn{font-size:14px;letter-spacing:.5px}
+</style></head><body><nav aria-label="Navegación principal">
   <a class="brand" href="index.html">DIEGO ZAPPA</a>
   <div class="navlinks">
     <details class="art-menu"><summary>ARTE GASTRONÓMICO</summary><div class="art-menu-panel"><a href="arte-gastronomico.html">Todas las modalidades</a><a href="arte-con-chocolate.html">Arte con Chocolate</a><a href="arte-con-jamon.html">Arte con Jamón</a><a href="arte-con-cafe.html">Arte con Café</a><a href="arte-con-vino.html">Arte con Vino</a></div></details>
@@ -63,39 +57,11 @@ figcaption{font-size:10px;letter-spacing:1.4px;line-height:1.6;color:var(--muted
     <a href="index.html#artista">EL ARTISTA</a>
     <a href="index.html#contacto">CONTACTO</a>
   </div>
-</nav>
-<header class="hero home-hero">
-  <div class="hero-content">
-    <div class="eyebrow">Diego Zappa · Artista y creador de experiencias</div>
-    <h1>EL ARTE<br>SE VIVE.</h1>
-    <p>Proyectos artísticos y experiencias para instituciones, empresas y eventos.</p>
-    <div class="actions"><a class="btn primary" href="#contacto">Solicitar propuesta</a></div>
-  </div>
-</header>
-<section class="interior-home" id="arte-interiores"><div class="eyebrow">Nuevo departamento · Arte para interiores</div><h2 class="section-title">Obras de arte<br>para tu espacio.</h2><p>Pintura de alta calidad para decoración de viviendas, hoteles y espacios profesionales. Abstracción, minimalismo, texturas y gran formato, con propuestas adaptadas a cada interior.</p><a class="btn primary" href="arte-para-interiores.html">Descubrir arte para interiores</a></section><section class="about" id="artista">
-  <div>
-    <div class="eyebrow">El artista</div>
-    <h2>Diego<br>Zappa</h2>
-    <figure><img class="about-photo" src="images/artista.svg" alt="Retrato ilustrado de Diego Zappa en su universo de arte y gastronomía" loading="lazy" width="598" height="1122"><figcaption>Retrato de presentación · Diego Zappa</figcaption></figure>
-
-  </div>
-  <div>
-    <p>Artista visual y creador de experiencias afincado en Zaragoza. Su trabajo une pintura, escultura y acciones en vivo.</p>
-    <p>Desarrolla proyectos personalizados para instituciones, empresas y espacios culturales, adaptados al lugar y a las personas.</p>
-</div>
-</section>
-<section class="contact" id="contacto">
-  <div class="eyebrow">Proyectos & colaboraciones</div>
-  <h2>¿Creamos algo<br>extraordinario?</h2>
-  <p>Propuestas personalizadas para ayuntamientos, instituciones, empresas, hoteles, marcas, ferias y espacios culturales.</p>
-  <a class="mail" href="mailto:diegozappazgz@gmail.com">diegozappazgz@gmail.com</a>
-  <a class="phone" href="tel:+34670635659">+34 670 635 659</a>
-  <a class="btn primary" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20art%C3%ADstica%20para%20mi%20evento">Cuéntame tu proyecto</a>
-</section>
-<footer>
+</nav><main><section class="department-heading chocolate-heading"><a class="back-link" href="arte-gastronomico.html">Todas las modalidades de arte gastronómico</a><div class="eyebrow">Diego Zappa · Arte gastronómico</div><h1>Arte con<br>Vino.</h1><p>Pinturas que utilizan el vino como materia artística. Viñedos, paisaje y patrimonio inspiran propuestas para bodegas, encuentros de marca y eventos culturales.</p></section>
+<section class="chocolate-gallery" aria-labelledby="vino-galeria"><div class="eyebrow">Imagen y territorio</div><h2 class="gallery-heading" id="vino-galeria">Inspiración en Cariñena.</h2><p class="gallery-lead">Una composición en tonos vino que reúne viñedos, uvas, patrimonio y bodegas. Pulsa sobre la imagen para verla completa y ampliada.</p><figure class="wine-photo"><a href="images/vino/carinena.webp" target="_blank" rel="noopener" aria-label="Ampliar imagen inspirada en Cariñena"><img src="images/vino/carinena.webp" alt="Composición en tonos vino inspirada en la Denominación de Origen Cariñena, con copa, uvas, viñedos, arquitectura y bodegas" width="1284" height="1518" decoding="async" fetchpriority="high"></a><figcaption>Arte con Vino · Inspiración en Cariñena</figcaption></figure></section>
+<section class="wine-video-section" aria-labelledby="vino-video"><div class="eyebrow">Vídeo</div><h2 class="gallery-heading" id="vino-video">Arte con Vino en imágenes.</h2><figure class="live-video"><iframe src="https://www.youtube-nocookie.com/embed/gcf5djZtadI" title="Vídeo de Arte con Vino · Diego Zappa" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption><a href="https://youtu.be/gcf5djZtadI" target="_blank" rel="noopener">Ver el vídeo en YouTube</a></figcaption></figure></section></main>
+<section class="contact wine-page-contact" id="contacto"><div class="eyebrow">Bodegas · Marcas · Cultura</div><h2>El vino como<br>lenguaje artístico.</h2><p>Cuéntanos tu proyecto para preparar una propuesta de Arte con Vino adaptada al lugar, al producto y a las personas.</p><a class="mail" href="mailto:diegozappazgz@gmail.com">diegozappazgz@gmail.com</a><a class="phone" href="tel:+34670635659">+34 670 635 659</a><a class="btn primary" href="mailto:diegozappazgz@gmail.com?subject=Propuesta%20Arte%20con%20Vino">Solicitar propuesta</a></section><footer>
   <div>DIEGO ZAPPA</div>
   <div>ART & GASTRONOMIC XPERIENCES</div>
   <div>© 2026</div>
-</footer>
-</body>
-</html>
+</footer></body></html>
