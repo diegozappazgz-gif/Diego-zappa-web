@@ -1,0 +1,33 @@
+name: Publish Live Art media
+on:
+  push:
+    paths:
+      - '.github/workflows/publish-live-art.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  media:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Fetch media
+        shell: bash
+        env:
+          IMAGE_URL: 'https://d2jqrm6oza8nb6.cloudfront.net/datasets/45677e89-7624-4656-9b17-269a027f497a.jpeg?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiZTVmZTg5MWFjMTgxZDMyZSIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTgwMjkwNn0.Sj9TvGT-eSckhWWWKc04BUIc7Vw-UhXmrnGJPwYzCu8'
+          VIDEO_URL: 'https://d2jqrm6oza8nb6.cloudfront.net/datasets/08249ac5-d21f-40fa-85b1-b8908969019b.mp4?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYmZjMTg1MzEzMWQzZmQ4ZiIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MTc5MDAwMX0.yq47PdbpwYOJFXGfUeYqP7VKmD95tsAQeX0trUTI-Ro'
+        run: |
+          mkdir -p images videos
+          curl --fail --location --retry 3 --silent --show-error "$IMAGE_URL" -o images/live-art-museo.jpg
+          curl --fail --location --retry 3 --silent --show-error "$VIDEO_URL" -o videos/live-art-presentacion.mp4
+          test $(wc -c < images/live-art-museo.jpg) -gt 200000
+          test $(wc -c < videos/live-art-presentacion.mp4) -gt 1000000
+      - name: Commit media
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images/live-art-museo.jpg videos/live-art-presentacion.mp4
+          git commit -m "Add Live Art photo and video" || exit 0
+          git push
