@@ -1,34 +1,30 @@
-name: Import Speed Painting photograph
+name: Publish Speed Painting artwork
 on:
+  push:
+    paths:
+      - 'images/speed-painting/miguel-hernandez-speed-painting.avif.b64'
   workflow_dispatch:
-    inputs:
-      photo_url:
-        description: 'Temporary URL for the original event photo'
-        required: true
-        type: string
 permissions:
   contents: write
 jobs:
-  import:
+  photo:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Download original JPEG
+      - name: Decode photo from safe temporary file
         shell: bash
-        env:
-          PHOTO_URL: ${{ inputs.photo_url }}
         run: |
-          mkdir -p images/speed-painting
-          curl --fail --location --retry 3 --silent --show-error "$PHOTO_URL" -o images/speed-painting/miguel-hernandez-speed-painting.jpg
-          test "$(wc -c < images/speed-painting/miguel-hernandez-speed-painting.jpg)" -gt 150000
-          file images/speed-painting/miguel-hernandez-speed-painting.jpg | grep -q JPEG
-      - name: Save photograph to main branch
+          base64 --decode images/speed-painting/miguel-hernandez-speed-painting.avif.b64 > images/speed-painting/miguel-hernandez-speed-painting.avif
+          test "$(wc -c < images/speed-painting/miguel-hernandez-speed-painting.avif)" -gt 18000
+          file images/speed-painting/miguel-hernandez-speed-painting.avif | grep -Ei 'AVIF|ISO Media' 
+      - name: Commit permanent media and remove transfer file
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add images/speed-painting/miguel-hernandez-speed-painting.jpg
-          git commit -m "Add Miguel Hernandez original Speed Painting photograph" || exit 0
+          git add images/speed-painting/miguel-hernandez-speed-painting.avif
+          git rm images/speed-painting/miguel-hernandez-speed-painting.avif.b64
+          git commit -m "Publish Miguel Hernandez Speed Painting photograph"
           git push
