@@ -1,0 +1,53 @@
+name: Update Speed Painting gallery
+on:
+  push:
+    paths:
+      - '.github/workflows/update-speed-painting-gallery.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Replace unrelated glitter gallery with painting photograph
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("speed-painting.html")
+          s = p.read_text(encoding="utf-8")
+          assert "speed-painting-purpurina-en-directo.jpg" in s
+          assert "speed-painting-purpurina-retrato-200x200.jpg" in s
+          s = s.replace(
+              "images/speed-painting/speed-painting-purpurina-en-directo.jpg",
+              "images/speed-painting/miguel-hernandez-speed-painting.avif"
+          )
+          s = s.replace(
+              "Diego Zappa creando un retrato de Steve Jobs con purpurina dorada en el aire ante un lienzo de gran formato",
+              "Retrato de Miguel Hernández presentado en un espectáculo de Speed Painting"
+          )
+          s = s.replace('width="1122" height="1402"', 'width="1024" height="766"')
+          s = s.replace('object-fit:cover;object-position:center;aspect-ratio:4/4.8',
+                        'object-fit:contain;object-position:center;aspect-ratio:4/3')
+          s = s.replace("Descubrir Speed Painting purpurina", "Ver otras técnicas")
+          start = s.index('<section><div class="heading-kicker">Técnica protagonista')
+          end = s.index('<section class="contact"', start)
+          detail = '''<section><div class="heading-kicker">Pintura en directo</div><div class="spread"><div><h2>El arte sucede<br>ante tus ojos.</h2><p>Un retrato de gran formato cobra vida en directo y convierte una celebración, homenaje o gala en una experiencia inolvidable.</p><p>La imagen presenta un homenaje pictórico a Miguel Hernández en un evento de Speed Painting.</p></div><div class="production-item" style="padding:40px;border:1px solid #59432d;background:#15120f"><span class="heading-kicker">Arte · emoción · espectáculo</span><h3>Una obra única para cada evento.</h3><p>Retratos personalizados, grandes formatos y una puesta en escena adaptada al público y a la ocasión.</p><div class="buttons" style="margin-top:25px"><a class="button" href="speed-painting-purpurina.html">Conocer Speed Painting con purpurina</a></div></div></div></section>
+          '''
+          s = s[:start] + detail + s[end:]
+          assert "speed-painting-purpurina-retrato-200x200.jpg" not in s
+          assert "miguel-hernandez-speed-painting.avif" in s
+          p.write_text(s, encoding="utf-8")
+          PY
+      - name: Commit updated painting page
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add speed-painting.html
+          git commit -m "Replace glitter photos with Miguel Hernandez painting" || exit 0
+          git push
